@@ -1,38 +1,77 @@
-.App {
+.app_postDetails {
+  margin: 2rem 3rem;
+  list-style: none;
+}
+
+.app_posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.post_detail_container {
+  /* margin-left: 2rem; */
+  padding: 0.5rem;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  min-height: 300px;
+}
+
+p {
+  margin: 0.5rem auto;
+}
+
+.app_post_heading {
+  font-size: 1.5rem;
+  color: #01011f;
+  border-bottom: 1px dashed lightgray;
+}
+
+.post_page_heading {
+  font-size: 2rem;
+  width: 100%;
   text-align: center;
+  margin: 1rem auto;
+  border: 1px solid lightgray;
+  padding: 0.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app_post_description {
+  color: #141414;
+  line-height: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.post_author {
+  font-size: 0.8rem;
+  color: grey;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.post_tags span {
+  /* border: 1px solid grey; */
+  text-transform: capitalize;
+  padding: 0.2rem 0.3rem;
+  margin: auto 0.2rem;
+  border-radius: 0.2rem;
+  background-color: #00ffff3c;
+  cursor: pointer;
+}
+
+.posts_reaction {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.posts_reaction .MuiSvgIcon-root {
+  color: rgb(236, 74, 74);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 700px) {
+  .app_posts {
+    grid-template-columns: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .post_page_heading {
+    font-size: 1.5rem;
   }
 }
