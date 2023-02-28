@@ -5,7 +5,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 function App() {
   const [postData, setPostData] = useState([]);
 
-  // useEffect hook without any depandancy is used so that the API call will be made once when the functional component is mounted
+  // useEffect hook without any dependency is used so that the API call will be made once when the functional component is mounted
   useEffect(() => {
     async function fetchPosts() {
       try {
